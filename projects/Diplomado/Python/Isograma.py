@@ -3,7 +3,7 @@ def Isograma(palabra):
     
     palabra_limpia = palabra.lower()
     
-    #con set en teoría debería funcionar porque guarda únicamente carácteres únicos
+    #con set en teoría debería funcionar porque guarda solo carácteres únicos
     
     if len(palabra_limpia) == len(set(palabra_limpia)):
         print(f"La palabra {palabra} es un Isograma.")

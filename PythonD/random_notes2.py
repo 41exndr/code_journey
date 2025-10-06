@@ -94,11 +94,11 @@ print(metodolista1) #dicho método no requiere asignación de variable y no devu
 dic = {'c1':'valor1', 'c2':2 , 3:'tres', 'c4':'tres'} #solo los valores pueden repetirse
 print(dic)
 
-resultadodic = dic['c1']
+resultadodic = dic['c1'] #imprime "valor1"
 print(resultadodic)
 
 client = {'nombre':'Juan', 'apellido':'Fuentes', 'peso':88, 'talla':1.75}
-consulta = (client['apellido'])
+consulta = (client['apellido']) #imprime fuentes
 print(consulta)
 
 dic2 = {'c1':55, 'c2':["manzana", "mango", 77], "edad":"22", "c3":{'s1':100, "s3":"hola"}} #acepta todo tipo de datos

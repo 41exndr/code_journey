@@ -3,11 +3,11 @@ import Hanoi
 import time
 
 def main():
-    cantidad_discos = HanoyModulo.menu()
-    HanoyModulo.inicializar_torres()
-    HanoyModulo.llenar_torres(cantidad_discos)
-    HanoyModulo.crear()
-    HanoyModulo.actualizar_matriz()
+    cantidad_discos = Hanoi.menu()
+    Hanoi.inicializar_torres()
+    Hanoi.llenar_torres(cantidad_discos)
+    Hanoi.crear()
+    Hanoi.actualizar_matriz()
     
     pasos = 0
     tiempo_inicio = time.time()
@@ -15,10 +15,10 @@ def main():
     while True:
         system("cls")
         
-        HanoyModulo.mostrartorres(pasos)
-        HanoyModulo.mostrar(HanoyModulo.l1[1:], HanoyModulo.l2[1:], HanoyModulo.l3[1:])
+        Hanoi.mostrartorres(pasos)
+        Hanoi.mostrar(Hanoi.l1[1:], Hanoi.l2[1:], Hanoi.l3[1:])
         
-        if HanoyModulo.ganar(cantidad_discos):
+        if Hanoi.ganar(cantidad_discos):
             tiempo_fin = time.time()
             print('\n¡FELICIDADES! HAS GANADO!')
             print(f'Tiempo: {tiempo_fin - tiempo_inicio:.2f} segundos')
@@ -26,17 +26,17 @@ def main():
             
             opcion = input('\nReiniciar <1>   Menu <2>   Salir <3>: ')
             if opcion == '1':
-                HanoyModulo.inicializar_torres()
-                HanoyModulo.llenar_torres(cantidad_discos)
-                HanoyModulo.actualizar_matriz()
+                Hanoi.inicializar_torres()
+                Hanoi.llenar_torres(cantidad_discos)
+                Hanoi.actualizar_matriz()
                 pasos = 0
                 tiempo_inicio = time.time()
                 
             elif opcion == '2':
-                cantidad_discos = HanoyModulo.menu()
-                HanoyModulo.inicializar_torres()
-                HanoyModulo.llenar_torres(cantidad_discos)
-                HanoyModulo.actualizar_matriz()
+                cantidad_discos = Hanoi.menu()
+                Hanoi.inicializar_torres()
+                Hanoi.llenar_torres(cantidad_discos)
+                Hanoi.actualizar_matriz()
                 pasos = 0
                 tiempo_inicio = time.time()
                 
@@ -58,36 +58,36 @@ def main():
         
 
         if movimiento == '1-2':
-            HanoyModulo.mover1_2()
+            Hanoi.mover1_2()
             pasos += 1
         elif movimiento == '1-3':
-            HanoyModulo.mover1_3()
+            Hanoi.mover1_3()
             pasos += 1
         elif movimiento == '2-1':
-            HanoyModulo.mover2_1()
+            Hanoi.mover2_1()
             pasos += 1
         elif movimiento == '2-3':
-            HanoyModulo.mover2_3()
+            Hanoi.mover2_3()
             pasos += 1
         elif movimiento == '3-1':
-            HanoyModulo.mover3_1()
+            Hanoi.mover3_1()
             pasos += 1
         elif movimiento == '3-2':
-            HanoyModulo.mover3_2()
+            Hanoi.mover3_2()
             pasos += 1
         elif movimiento == '4':
 
-            HanoyModulo.inicializar_torres()
-            HanoyModulo.llenar_torres(cantidad_discos)
-            HanoyModulo.actualizar_matriz()
+            Hanoi.inicializar_torres()
+            Hanoi.llenar_torres(cantidad_discos)
+            Hanoi.actualizar_matriz()
             pasos = 0
             tiempo_inicio = time.time()
         elif movimiento == '5':
 
-            cantidad_discos = HanoyModulo.menu()
-            HanoyModulo.inicializar_torres()
-            HanoyModulo.llenar_torres(cantidad_discos)
-            HanoyModulo.actualizar_matriz()
+            cantidad_discos = Hanoi.menu()
+            Hanoi.inicializar_torres()
+            Hanoi.llenar_torres(cantidad_discos)
+            Hanoi.actualizar_matriz()
             pasos = 0
             tiempo_inicio = time.time()
         elif movimiento == '6':
