@@ -1,3 +1,5 @@
+//Ejemplos de constructor y su uso en main
+
 public class Store {
   // instance fields
   String productType;
